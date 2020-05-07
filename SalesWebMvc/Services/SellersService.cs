@@ -40,14 +40,13 @@ namespace SalesWebMvc.Services
 
         public void Update(Seller obj)
         {
-            Console.WriteLine("Id do Departamento nao encontrado " + obj.DepartmentId.ToString());
-            
+
             if (!_context.Seller.Any(x => x.Id == obj.Id))
             {
                 throw new NotFoundException("Id not found");
             }
 
-            if(!_context.Department.Any(x=>x.Id == obj.DepartmentId))
+            if (!_context.Department.Any(x => x.Id == obj.DepartmentId))
             {
                 throw new NotFoundException("Id do Departamento nao encontrado " + obj.DepartmentId.ToString());
             }
