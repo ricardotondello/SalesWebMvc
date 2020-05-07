@@ -30,7 +30,7 @@ namespace SalesWebMvc.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime BirthDate { get; set; }
 
-        public Department Departament { get; set; }
+        public Department Department { get; set; }
 
         [Display(Name = "Department")]
         public int DepartmentId { get; set; }
@@ -41,14 +41,14 @@ namespace SalesWebMvc.Models
 
         }
 
-        public Seller(int id, string name, string email, double baseSalary, DateTime birthDate, Department departament)
+        public Seller(int id, string name, string email, double baseSalary, DateTime birthDate, Department department)
         {
             Id = id;
             Name = name;
             Email = email;
             BaseSalary = baseSalary;
             BirthDate = birthDate;
-            Departament = departament;
+            Department = department;
         }
 
         public void AddSales(SalesRecord sr)
